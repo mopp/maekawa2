@@ -12,6 +12,8 @@ const rtm = new RTMClient(token);
 rtm.on('message', message => {
   // Skip messages that are from a bot or my own user ID or not mentioned to me.
   if (
+    !message ||
+    !message.text ||
     (message.subtype && message.subtype === 'bot_message') ||
     (!message.subtype && message.user === rtm.activeUserId) ||
     !message.text.includes(`<@${rtm.activeUserId}>`)
