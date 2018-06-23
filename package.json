@@ -1,0 +1,23 @@
+{
+  "name": "maekawa2",
+  "version": "0.0.1",
+  "description": "Miku Maekawa",
+  "main": "index.js",
+  "scripts": {
+    "start": "node src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mopp/maekawa2.git"
+  },
+  "author": "mopp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mopp/maekawa2/issues"
+  },
+  "homepage": "https://github.com/mopp/maekawa2#readme",
+  "dependencies": {
+    "@slack/client": "^4.3.1",
+    "dotenv": "^6.0.0"
+  }
+}
