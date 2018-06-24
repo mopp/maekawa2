@@ -37,3 +37,14 @@ rtm.on('message', message => {
 });
 
 rtm.start();
+
+// to avoid crashing on heroku, run a dummy server
+if (process.env.PORT) {
+  const http = require('http');
+  http
+    .createServer((req, res) => {
+      res.writeHead(404, { 'Content-Type': 'text/plain; charset=UTF-8' });
+      res.end('みくだにゃ\n');
+    })
+    .listen(process.env.PORT);
+}
